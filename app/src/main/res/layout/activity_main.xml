@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/worldcup"
+    android:alpha="0.9">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="25dp"
+                android:hint="Name"
+                android:textColorHint="#808080"
+                android:textColor="#e5c685"
+                android:inputType="textCapWords"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="16dp"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="30dp"
+                app:cardBackgroundColor="#e5c685">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:textColor="#171714"
+                        android:lineSpacingExtra="5dp"
+                        android:text="1. What country is FIFA headquartered in?" />
+
+                    <RadioGroup
+                        android:id="@+id/quest_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/quest_1_id_a"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Italy"
+                            android:onClick="question1"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_1_id_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Switzerland"
+                            android:onClick="question1"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_1_id_c"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Brazil"
+                            android:onClick="question1"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_1_id_d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Spain"
+                            android:onClick="question1"/>
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                app:cardBackgroundColor="#e5c685"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="16dp"
+                app:cardPreventCornerOverlap="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:textColor="#171714"
+                        android:lineSpacingExtra="5dp"
+                        android:text="2. How many teams will participate in this year’s World Cup?" />
+
+                    <RadioGroup
+                        android:id="@+id/quest_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/quest_2_id_a"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="13"
+                            android:onClick="question2"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_2_id_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="18"
+                            android:onClick="question2"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_2_id_c"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="24"
+                            android:onClick="question2"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_2_id_d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="32"
+                            android:onClick="question2"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                app:cardBackgroundColor="#e5c685"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="16dp"
+                app:cardPreventCornerOverlap="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:textColor="#171714"
+                        android:lineSpacingExtra="5dp"
+                        android:text="3. How many teams participated in the first World Cup?" />
+
+                    <RadioGroup
+                        android:id="@+id/quest_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/quest_3_id_a"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="13"
+                            android:onClick="question3" />
+
+
+                        <RadioButton
+                            android:id="@+id/quest_3_id_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="18"
+                            android:onClick="question3"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_3_id_c"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="24"
+                            android:onClick="question3"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_3_id_d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="32"
+                            android:onClick="question3"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                app:cardBackgroundColor="#e5c685"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="16dp"
+                app:cardPreventCornerOverlap="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:textColor="#171714"
+                        android:lineSpacingExtra="5dp"
+                        android:text="4. Which of these countries did not participate in the first World Cup?" />
+
+                    <RadioGroup
+                        android:id="@+id/quest_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/quest_4_id_a"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Peru"
+                            android:onClick="question4"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_4_id_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Germany"
+                            android:onClick="question4"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_4_id_c"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Romania"
+                            android:onClick="question4"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_4_id_d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="USA"
+                            android:onClick="question4"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                app:cardBackgroundColor="#e5c685"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="16dp"
+                app:cardPreventCornerOverlap="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:textColor="#171714"
+                        android:lineSpacingExtra="5dp"
+                        android:text="5. What nation has played in every world cup?" />
+
+                    <RadioGroup
+                        android:id="@+id/quest_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/quest_5_id_a"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Spain"
+                            android:onClick="question5"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_5_id_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Germany"
+                            android:onClick="question5"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_5_id_c"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Italy"
+                            android:onClick="question5"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_5_id_d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Brazil"
+                            android:onClick="question5"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                app:cardBackgroundColor="#e5c685"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="16dp"
+                app:cardPreventCornerOverlap="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:textColor="#171714"
+                        android:lineSpacingExtra="5dp"
+                        android:text="6. Where is the 2018 World Cup taking place?" />
+
+                    <RadioGroup
+                        android:id="@+id/quest_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/quest_6_id_a"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Spain"
+                            android:onClick="question6"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_6_id_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="South Africa"
+                            android:onClick="question6"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_6_id_c"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Russia"
+                            android:onClick="question6"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_6_id_d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Qatar"
+                            android:onClick="question6"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                app:cardBackgroundColor="#e5c685"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="16dp"
+                app:cardPreventCornerOverlap="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:textColor="#171714"
+                        android:lineSpacingExtra="5dp"
+                        android:text="7. Which African country has competed in 7 World Cups, the most of any African country?" />
+
+                    <RadioGroup
+                        android:id="@+id/quest_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/quest_7_id_a"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Nigeria"
+                            android:onClick="question7"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_7_id_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Morocco"
+                            android:onClick="question7"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_7_id_c"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Cameroon"
+                            android:onClick="question7"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_7_id_d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Ghana"
+                            android:onClick="question7"/>
+
+                        <RadioButton
+                            android:id="@+id/quest_7_id_e"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Ivory Coast"
+                            android:onClick="question7"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                app:cardBackgroundColor="#e5c685"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="16dp"
+                app:cardPreventCornerOverlap="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:textColor="#171714"
+                        android:lineSpacingExtra="5dp"
+                        android:text="8. Who holds the all-time record for the most number of goals scored during World Cup?" />
+
+                    <RadioGroup
+                        android:id="@+id/quest_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/quest_8_id_a"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="De Lima Ronaldo"
+                            android:onClick="question8"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_8_id_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Pele"
+                            android:onClick="question8"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_8_id_c"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Maradona"
+                            android:onClick="question8"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_8_id_d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Miroslav Klose"
+                            android:onClick="question8"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                app:cardBackgroundColor="#e5c685"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="16dp"
+                app:cardPreventCornerOverlap="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:textColor="#171714"
+                        android:lineSpacingExtra="5dp"
+                        android:text="9. Who is the only player to win three World Cups?" />
+
+                    <RadioGroup
+                        android:id="@+id/quest_9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/quest_9_id_a"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Maradona"
+                            android:onClick="question9"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_9_id_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Miroslav Klose"
+                            android:onClick="question9"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_9_id_c"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Pele"
+                            android:onClick="question9"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_9_id_d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="De Lima Ronaldo"
+                            android:onClick="question9"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                app:cardBackgroundColor="#e5c685"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="16dp"
+                app:cardPreventCornerOverlap="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:textColor="#171714"
+                        android:lineSpacingExtra="5dp"
+                        android:text="10. What country has finished in second place three times but has never won a World Cup?" />
+
+                    <RadioGroup
+                        android:id="@+id/quest_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/quest_10_id_a"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Bulgaria"
+                            android:onClick="question10"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_10_id_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Netherlands"
+                            android:onClick="question10"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_10_id_c"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Austria"
+                            android:onClick="question10"/>
+
+
+                        <RadioButton
+                            android:id="@+id/quest_10_id_d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:paddingLeft="4dp"
+                            android:text="Belgium"
+                            android:onClick="question10"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="55dp"
+            android:layout_marginRight="55dp"
+            android:layout_marginBottom="16dp"
+            android:textAllCaps="true"
+            android:textSize="28sp"
+            android:background="#e5c685"
+            android:textColor="#171714"
+            android:textStyle="bold"
+            android:onClick="order"
+            android:text="Submit"/>
+
+
+    </LinearLayout>
+</ScrollView>
