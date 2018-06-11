@@ -449,56 +449,14 @@
                         android:lineSpacingExtra="5dp"
                         android:text="6. Where is the 2018 World Cup taking place?" />
 
-                    <RadioGroup
-                        android:id="@+id/quest_6"
-                        android:layout_width="match_parent"
+                    <EditText
+                        android:id="@+id/quest_6_ans"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <RadioButton
-                            android:id="@+id/quest_6_id_a"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:layout_marginLeft="16dp"
-                            android:paddingLeft="4dp"
-                            android:text="Spain"
-                            android:onClick="question6"/>
-
-
-                        <RadioButton
-                            android:id="@+id/quest_6_id_b"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:layout_marginLeft="16dp"
-                            android:paddingLeft="4dp"
-                            android:text="South Africa"
-                            android:onClick="question6"/>
-
-
-                        <RadioButton
-                            android:id="@+id/quest_6_id_c"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:layout_marginLeft="16dp"
-                            android:paddingLeft="4dp"
-                            android:text="Russia"
-                            android:onClick="question6"/>
-
-
-                        <RadioButton
-                            android:id="@+id/quest_6_id_d"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="16dp"
-                            android:layout_marginLeft="16dp"
-                            android:paddingLeft="4dp"
-                            android:text="Qatar"
-                            android:onClick="question6"/>
-                    </RadioGroup>
-
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:inputType="textCapWords"/>
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>

@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     public void order (View view) {
         EditText text = (EditText) findViewById(R.id.name);
         String name = text.getText().toString();
+        EditText ansSix = (EditText) findViewById(R.id.quest_6_ans);
+        String ans = ansSix.getText().toString();
         if (name.trim().equals("")) {
             Toast.makeText(this, "Please enter your name!!! ", Toast.LENGTH_SHORT).show();
             return;
@@ -36,62 +38,24 @@ public class MainActivity extends AppCompatActivity {
         RadioGroup questThree = (RadioGroup) findViewById(R.id.quest_3);
         RadioGroup questFour = (RadioGroup) findViewById(R.id.quest_4);
         RadioGroup questFive = (RadioGroup) findViewById(R.id.quest_5);
-        RadioGroup questSix = (RadioGroup) findViewById(R.id.quest_6);
         RadioGroup questSeven = (RadioGroup) findViewById(R.id.quest_7);
         RadioGroup questEight = (RadioGroup) findViewById(R.id.quest_8);
         RadioGroup questNine = (RadioGroup) findViewById(R.id.quest_9);
         RadioGroup questTen = (RadioGroup) findViewById(R.id.quest_10);
         if ((questOne.getCheckedRadioButtonId() == -1) || (questTwo.getCheckedRadioButtonId() == -1) || (questThree.getCheckedRadioButtonId() == -1)
                 || (questFour.getCheckedRadioButtonId() == -1) || (questFive.getCheckedRadioButtonId() == -1)
-                || (questSix.getCheckedRadioButtonId() == -1) || (questSeven.getCheckedRadioButtonId() == -1)
+                || (ans.trim().equals("")) || (questSeven.getCheckedRadioButtonId() == -1)
                 || (questEight.getCheckedRadioButtonId() == -1) || (questNine.getCheckedRadioButtonId() == -1)
                 || (questTen.getCheckedRadioButtonId() == -1)) {
             Toast.makeText(this, "Please answer all questions!!! ", Toast.LENGTH_SHORT).show();
             return;
         }
+        if (ans == "Russia") {
+            score += 10;
+        }
         String order = endMessage(name, score);
-        extra = order;
-//        summary(order);
-        dialog();
+        Toast.makeText(this, order, Toast.LENGTH_SHORT).show();
     }
-
-    public void sendMessage() {
-        Intent intent = new Intent(this, ResultPage.class);
-//        EditText text = (EditText) findViewById(R.id.name);
-//        String message = text.getText().toString();
-//        String order = endMessage(message, score);
-        intent.putExtra(EXTRA_MESSAGE, extra);
-        startActivity(intent);
-    }
-
-    public void dialog () {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setCancelable(true);
-        builder.setTitle("Confirmation");
-        builder.setMessage("Are these your final answers?");
-        builder.setPositiveButton("Confirm",
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        sendMessage();
-                    }
-                });
-        builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-            }
-        });
-
-        AlertDialog dialog = builder.create();
-        dialog.show();
-    }
-
-//    public void summary (String sum) {
-//        TextView text = (TextView) findViewById(R.id.summary);
-//        text.setText(sum);
-//    }
-
-
 
     public String endMessage (String name, int score) {
         String message = "HI, " + name;
@@ -289,38 +253,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.quest_5_id_d:
                 if (checked) {
                     score += 10;
-                }
-                break;
-        }
-    }
-
-    public void question6 (View view) {
-        boolean checked = ((RadioButton) view). isChecked();
-        switch (view.getId()) {
-            case R.id.quest_6_id_a:
-                if (checked) {
-                    //score += 0;
-                    return;
-                }
-                break;
-
-            case R.id.quest_6_id_b:
-                if (checked) {
-                    //score += 0;
-                    return;
-                }
-                break;
-
-            case R.id.quest_6_id_c:
-                if (checked) {
-                    score += 10;
-                }
-                break;
-
-            case R.id.quest_6_id_d:
-                if (checked) {
-                    //score += 0;
-                    return;
                 }
                 break;
         }
