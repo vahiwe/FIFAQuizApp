@@ -289,58 +289,56 @@
                         android:layout_margin="16dp"
                         android:textColor="#171714"
                         android:lineSpacingExtra="5dp"
-                        android:text="4. Which of these countries did not participate in the first World Cup?" />
+                        android:text="4. What two nations have won consecutive World Cup titles?" />
 
-                    <RadioGroup
-                        android:id="@+id/quest_4"
-                        android:layout_width="match_parent"
+                    <CheckBox
+                        android:id="@+id/quest_4_id_a"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:text="Spain"
+                        android:paddingLeft="4dp"
+                        android:layout_margin="16dp"
+                        android:onClick="question4"/>
 
-                        <RadioButton
-                            android:id="@+id/quest_4_id_a"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:layout_marginLeft="16dp"
-                            android:paddingLeft="4dp"
-                            android:text="Peru"
-                            android:onClick="question4"/>
+                    <CheckBox
+                        android:id="@+id/quest_4_id_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="France"
+                        android:paddingLeft="4dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:onClick="question4"/>
 
+                    <CheckBox
+                        android:id="@+id/quest_4_id_c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Italy"
+                        android:paddingLeft="4dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:onClick="question4"/>
 
-                        <RadioButton
-                            android:id="@+id/quest_4_id_b"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:layout_marginLeft="16dp"
-                            android:paddingLeft="4dp"
-                            android:text="Germany"
-                            android:onClick="question4"/>
+                    <CheckBox
+                        android:id="@+id/quest_4_id_d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Germany"
+                        android:paddingLeft="4dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:onClick="question4"/>
 
-
-                        <RadioButton
-                            android:id="@+id/quest_4_id_c"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:layout_marginLeft="16dp"
-                            android:paddingLeft="4dp"
-                            android:text="Romania"
-                            android:onClick="question4"/>
-
-
-                        <RadioButton
-                            android:id="@+id/quest_4_id_d"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="16dp"
-                            android:layout_marginLeft="16dp"
-                            android:paddingLeft="4dp"
-                            android:text="USA"
-                            android:onClick="question4"/>
-                    </RadioGroup>
-
+                    <CheckBox
+                        android:id="@+id/quest_4_id_e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Brazil"
+                        android:paddingLeft="4dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:onClick="question4"/>
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
@@ -451,11 +449,11 @@
 
                     <EditText
                         android:id="@+id/quest_6_ans"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="16dp"
                         android:layout_marginLeft="16dp"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginBottom="25dp"
                         android:inputType="textCapWords"/>
                 </LinearLayout>
 

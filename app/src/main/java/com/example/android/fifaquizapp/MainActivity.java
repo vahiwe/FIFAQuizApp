@@ -6,17 +6,18 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Timer;
+
 public class MainActivity extends AppCompatActivity {
 
-    public static final String EXTRA_MESSAGE = "com.example.android.fifaquizapp";
     int score = 0;
-    String extra;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,36 +26,43 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void order (View view) {
-        EditText text = (EditText) findViewById(R.id.name);
+        EditText text =  findViewById(R.id.name);
         String name = text.getText().toString();
-        EditText ansSix = (EditText) findViewById(R.id.quest_6_ans);
+        EditText ansSix =  findViewById(R.id.quest_6_ans);
         String ans = ansSix.getText().toString();
         if (name.trim().equals("")) {
             Toast.makeText(this, "Please enter your name!!! ", Toast.LENGTH_SHORT).show();
             return;
         }
-        RadioGroup questOne = (RadioGroup) findViewById(R.id.quest_1);
-        RadioGroup questTwo = (RadioGroup) findViewById(R.id.quest_2);
-        RadioGroup questThree = (RadioGroup) findViewById(R.id.quest_3);
-        RadioGroup questFour = (RadioGroup) findViewById(R.id.quest_4);
-        RadioGroup questFive = (RadioGroup) findViewById(R.id.quest_5);
-        RadioGroup questSeven = (RadioGroup) findViewById(R.id.quest_7);
-        RadioGroup questEight = (RadioGroup) findViewById(R.id.quest_8);
-        RadioGroup questNine = (RadioGroup) findViewById(R.id.quest_9);
-        RadioGroup questTen = (RadioGroup) findViewById(R.id.quest_10);
+        RadioGroup questOne =  findViewById(R.id.quest_1);
+        RadioGroup questTwo =  findViewById(R.id.quest_2);
+        RadioGroup questThree =  findViewById(R.id.quest_3);
+        RadioGroup questFive =  findViewById(R.id.quest_5);
+        RadioGroup questSeven =  findViewById(R.id.quest_7);
+        RadioGroup questEight =  findViewById(R.id.quest_8);
+        RadioGroup questNine =  findViewById(R.id.quest_9);
+        RadioGroup questTen =  findViewById(R.id.quest_10);
+        CheckBox box1 =  findViewById(R.id.quest_4_id_a);
+        CheckBox box2 =  findViewById(R.id.quest_4_id_b);
+        CheckBox box3 =  findViewById(R.id.quest_4_id_c);
+        CheckBox box4 =  findViewById(R.id.quest_4_id_d);
+        CheckBox box5 =  findViewById(R.id.quest_4_id_e);
         if ((questOne.getCheckedRadioButtonId() == -1) || (questTwo.getCheckedRadioButtonId() == -1) || (questThree.getCheckedRadioButtonId() == -1)
-                || (questFour.getCheckedRadioButtonId() == -1) || (questFive.getCheckedRadioButtonId() == -1)
+                || (questFive.getCheckedRadioButtonId() == -1)
                 || (ans.trim().equals("")) || (questSeven.getCheckedRadioButtonId() == -1)
                 || (questEight.getCheckedRadioButtonId() == -1) || (questNine.getCheckedRadioButtonId() == -1)
-                || (questTen.getCheckedRadioButtonId() == -1)) {
+                || (questTen.getCheckedRadioButtonId() == -1) || ((!box1.isChecked()) && (!box2.isChecked()) && (!box3.isChecked())
+                && (!box4.isChecked()) && (!box5.isChecked()))) {
             Toast.makeText(this, "Please answer all questions!!! ", Toast.LENGTH_SHORT).show();
             return;
         }
-        if (ans == "Russia") {
+        if (ans.equals("Russia")) {
             score += 10;
         }
         String order = endMessage(name, score);
         Toast.makeText(this, order, Toast.LENGTH_SHORT).show();
+        //new Timer().schedule(reset();, 5000);
+        reset();
     }
 
     public String endMessage (String name, int score) {
@@ -96,6 +104,40 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         return message;
+    }
+
+    public void reset () {
+        EditText text  =  findViewById(R.id.quest_6_ans);
+        text.setText(null);
+        EditText txt =  findViewById(R.id.name);
+        txt.setText(null);
+        RadioGroup questOne =  findViewById(R.id.quest_1);
+        RadioGroup questTwo =  findViewById(R.id.quest_2);
+        RadioGroup questThree =  findViewById(R.id.quest_3);
+        RadioGroup questFive =  findViewById(R.id.quest_5);
+        RadioGroup questSeven =  findViewById(R.id.quest_7);
+        RadioGroup questEight =  findViewById(R.id.quest_8);
+        RadioGroup questNine =  findViewById(R.id.quest_9);
+        RadioGroup questTen =  findViewById(R.id.quest_10);
+        questOne.clearCheck();
+        questTwo.clearCheck();
+        questThree.clearCheck();
+        questFive.clearCheck();
+        questSeven.clearCheck();
+        questEight.clearCheck();
+        questNine.clearCheck();
+        questTen.clearCheck();
+        CheckBox box1 =  findViewById(R.id.quest_4_id_a);
+        CheckBox box2 =  findViewById(R.id.quest_4_id_b);
+        CheckBox box3 =  findViewById(R.id.quest_4_id_c);
+        CheckBox box4 =  findViewById(R.id.quest_4_id_d);
+        CheckBox box5 =  findViewById(R.id.quest_4_id_e);
+        box1.setChecked(false);
+        box2.setChecked(false);
+        box3.setChecked(false);
+        box4.setChecked(false);
+        box5.setChecked(false);
+        score = 0;
     }
 
     public void question1 (View view) {
@@ -195,35 +237,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void question4 (View view) {
-        boolean checked = ((RadioButton) view). isChecked();
-        switch (view.getId()) {
-            case R.id.quest_4_id_a:
-                if (checked) {
-                    //score += 0;
-                    return;
-                }
-                break;
+        CheckBox box1 =  findViewById(R.id.quest_4_id_a);
+        CheckBox box2 =  findViewById(R.id.quest_4_id_b);
+        CheckBox box3 =  findViewById(R.id.quest_4_id_c);
+        CheckBox box4 =  findViewById(R.id.quest_4_id_d);
+        CheckBox box5 =  findViewById(R.id.quest_4_id_e);
+        boolean val1 = box1.isChecked();
+        boolean val2 = box2.isChecked();
+        boolean val3 = box3.isChecked();
+        boolean val4 = box4.isChecked();
+        boolean val5 = box5.isChecked();
 
-            case R.id.quest_4_id_b:
-                if (checked) {
-                    score += 10;
-                }
-                break;
-
-            case R.id.quest_4_id_c:
-                if (checked) {
-                    //score += 0;
-                    return;
-                }
-                break;
-
-            case R.id.quest_4_id_d:
-                if (checked) {
-                    //score += 0;
-                    return;
-                }
-                break;
+        if (val3 && val5 && !val1 && !val2 && !val4) {
+            score += 10;
         }
+
     }
 
     public void question5 (View view) {

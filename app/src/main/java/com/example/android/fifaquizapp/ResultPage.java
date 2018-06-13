@@ -13,14 +13,6 @@ public class ResultPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_page);
 
-
-        Intent intent = getIntent();
-        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-
-        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/Champ.ttf");
-        TextView text = (TextView)findViewById(R.id.result);
-        text.setText(message);
-        text.setTypeface(typeface);
     }
 
 }
