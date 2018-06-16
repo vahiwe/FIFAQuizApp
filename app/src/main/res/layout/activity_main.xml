@@ -67,6 +67,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Italy"
                             android:onClick="question1"/>
 
@@ -78,6 +79,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Switzerland"
                             android:onClick="question1"/>
 
@@ -89,6 +91,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Brazil"
                             android:onClick="question1"/>
 
@@ -100,6 +103,7 @@
                             android:layout_marginBottom="16dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Spain"
                             android:onClick="question1"/>
                     </RadioGroup>
@@ -146,6 +150,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="13"
                             android:onClick="question2"/>
 
@@ -157,6 +162,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="18"
                             android:onClick="question2"/>
 
@@ -168,6 +174,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="24"
                             android:onClick="question2"/>
 
@@ -179,6 +186,7 @@
                             android:layout_marginBottom="16dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="32"
                             android:onClick="question2"/>
                     </RadioGroup>
@@ -225,6 +233,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="13"
                             android:onClick="question3" />
 
@@ -236,6 +245,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="18"
                             android:onClick="question3"/>
 
@@ -247,6 +257,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="24"
                             android:onClick="question3"/>
 
@@ -258,6 +269,7 @@
                             android:layout_marginBottom="16dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="32"
                             android:onClick="question3"/>
                     </RadioGroup>
@@ -297,6 +309,7 @@
                         android:layout_height="wrap_content"
                         android:text="Spain"
                         android:paddingLeft="4dp"
+                        style="@style/my_checkbox_style"
                         android:layout_margin="16dp"
                         android:onClick="question4"/>
 
@@ -306,6 +319,7 @@
                         android:layout_height="wrap_content"
                         android:text="France"
                         android:paddingLeft="4dp"
+                        style="@style/my_checkbox_style"
                         android:layout_marginLeft="16dp"
                         android:layout_marginBottom="16dp"
                         android:onClick="question4"/>
@@ -316,6 +330,7 @@
                         android:layout_height="wrap_content"
                         android:text="Italy"
                         android:paddingLeft="4dp"
+                        style="@style/my_checkbox_style"
                         android:layout_marginLeft="16dp"
                         android:layout_marginBottom="16dp"
                         android:onClick="question4"/>
@@ -326,6 +341,7 @@
                         android:layout_height="wrap_content"
                         android:text="Germany"
                         android:paddingLeft="4dp"
+                        style="@style/my_checkbox_style"
                         android:layout_marginLeft="16dp"
                         android:layout_marginBottom="16dp"
                         android:onClick="question4"/>
@@ -336,6 +352,7 @@
                         android:layout_height="wrap_content"
                         android:text="Brazil"
                         android:paddingLeft="4dp"
+                        style="@style/my_checkbox_style"
                         android:layout_marginLeft="16dp"
                         android:layout_marginBottom="16dp"
                         android:onClick="question4"/>
@@ -381,6 +398,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Spain"
                             android:onClick="question5"/>
 
@@ -392,6 +410,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Germany"
                             android:onClick="question5"/>
 
@@ -403,6 +422,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Italy"
                             android:onClick="question5"/>
 
@@ -414,6 +434,7 @@
                             android:layout_marginBottom="16dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Brazil"
                             android:onClick="question5"/>
                     </RadioGroup>
@@ -496,6 +517,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Nigeria"
                             android:onClick="question7"/>
 
@@ -507,6 +529,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Morocco"
                             android:onClick="question7"/>
 
@@ -518,6 +541,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Cameroon"
                             android:onClick="question7"/>
 
@@ -529,6 +553,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Ghana"
                             android:onClick="question7"/>
 
@@ -539,6 +564,7 @@
                             android:layout_marginBottom="16dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Ivory Coast"
                             android:onClick="question7"/>
                     </RadioGroup>
@@ -585,6 +611,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="De Lima Ronaldo"
                             android:onClick="question8"/>
 
@@ -596,6 +623,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Pele"
                             android:onClick="question8"/>
 
@@ -607,6 +635,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Maradona"
                             android:onClick="question8"/>
 
@@ -618,6 +647,7 @@
                             android:layout_marginBottom="16dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Miroslav Klose"
                             android:onClick="question8"/>
                     </RadioGroup>
@@ -663,6 +693,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Maradona"
                             android:onClick="question9"/>
 
@@ -674,6 +705,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Miroslav Klose"
                             android:onClick="question9"/>
 
@@ -685,6 +717,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Pele"
                             android:onClick="question9"/>
 
@@ -696,6 +729,7 @@
                             android:layout_marginBottom="16dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="De Lima Ronaldo"
                             android:onClick="question9"/>
                     </RadioGroup>
@@ -742,6 +776,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Bulgaria"
                             android:onClick="question10"/>
 
@@ -753,6 +788,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Netherlands"
                             android:onClick="question10"/>
 
@@ -764,6 +800,7 @@
                             android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Austria"
                             android:onClick="question10"/>
 
@@ -775,6 +812,7 @@
                             android:layout_marginBottom="16dp"
                             android:layout_marginLeft="16dp"
                             android:paddingLeft="4dp"
+                            style="@style/my_checkbox_style"
                             android:text="Belgium"
                             android:onClick="question10"/>
                     </RadioGroup>

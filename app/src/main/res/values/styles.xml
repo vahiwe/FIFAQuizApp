@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="my_checkbox_style">
+        <item name="buttonTint">#0074B1</item>
+    </style>
+
 </resources>
