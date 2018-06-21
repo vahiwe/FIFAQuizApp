@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
         if (ans.equals("Russia")) {
             score += 10;
         }
+        if (score > 100) {
+            score = 100;
+        }
         String order = endMessage(name, score);
         Toast.makeText(this, order, Toast.LENGTH_SHORT).show();
         //new Timer().schedule(reset();, 5000);
