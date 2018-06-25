@@ -1,12 +1,12 @@
 # FIFAQuizApp
 
-This an android app that quizzes the user on some questions about the FIFA World Cup. 
+This is an android app that quizzes the user on some questions about the FIFA World Cup. 
 
 ### Prerequisites
 
 An android phone operating on Android 4.0 and above
 
-### Installing
+### Installation
 
 Clone the repo on your android studio and build it. Then you can install the apk on your phone
 
