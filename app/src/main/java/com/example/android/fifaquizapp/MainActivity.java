@@ -1,8 +1,5 @@
 package com.example.android.fifaquizapp;
 
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,10 +7,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.Timer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +19,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    /**
+     *
+     * @param view
+     * This is the method that controls the submit button action
+     * It validates that all questions are answered and that a name is filled
+     * Before displaying a toast with name, score and a short message that changes with each score
+     * It also checks the correct answer for number 6
+     */
     public void order (View view) {
         EditText text =  findViewById(R.id.name);
         String name = text.getText().toString();
@@ -64,10 +66,18 @@ public class MainActivity extends AppCompatActivity {
         }
         String order = endMessage(name, score);
         Toast.makeText(this, order, Toast.LENGTH_SHORT).show();
-        //new Timer().schedule(reset();, 5000);
         reset();
     }
 
+
+    /**
+     *
+     * @param name {int}
+     * @param score {String}
+     * @return
+     * This method returns the final message for the toast using score and name
+     * It also generates different replies based on your score using switch statements
+     */
     public String endMessage (String name, int score) {
         String message = "HI, " + name;
         message += "\nYou scored " + score + "%\n";
@@ -109,6 +119,9 @@ public class MainActivity extends AppCompatActivity {
         return message;
     }
 
+    /**
+     * This method resets the app after all the questions have been submitted
+     */
     public void reset () {
         EditText text  =  findViewById(R.id.quest_6_ans);
         text.setText(null);
@@ -143,6 +156,12 @@ public class MainActivity extends AppCompatActivity {
         score = 0;
     }
 
+    /**
+     *
+     * @param view
+     * This method checks if the correct answer is chosen for question one using switch statements
+     * It also adds to the score if the correct answer is chosen and does nothing otherwise
+     */
     public void question1 (View view) {
         boolean checked = ((RadioButton) view). isChecked();
         switch (view.getId()) {
@@ -175,6 +194,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     *
+     * @param view
+     * This method checks if the correct answer is chosen for question two using switch statements
+     * It also adds to the score if the correct answer is chosen and does nothing otherwise
+     */
     public void question2 (View view) {
         boolean checked = ((RadioButton) view). isChecked();
         switch (view.getId()) {
@@ -207,6 +232,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     *
+     * @param view
+     * This method checks if the correct answer is chosen for question three using switch statements
+     * It also adds to the score if the correct answer is chosen and does nothing otherwise
+     */
     public void question3 (View view) {
         boolean checked = ((RadioButton) view). isChecked();
         switch (view.getId()) {
@@ -239,6 +270,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     *
+     * @param view
+     * This method checks if the correct answer is chosen for question four using switch statements
+     * It also adds to the score if the correct answer is chosen and does nothing otherwise
+     */
     public void question4 (View view) {
         CheckBox box1 =  findViewById(R.id.quest_4_id_a);
         CheckBox box2 =  findViewById(R.id.quest_4_id_b);
@@ -257,6 +294,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     *
+     * @param view
+     * This method checks if the correct answer is chosen for question five using switch statements
+     * It also adds to the score if the correct answer is chosen and does nothing otherwise
+     */
     public void question5 (View view) {
         boolean checked = ((RadioButton) view). isChecked();
         switch (view.getId()) {
@@ -289,6 +332,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     *
+     * @param view
+     * This method checks if the correct answer is chosen for question seven using switch statements
+     * It also adds to the score if the correct answer is chosen and does nothing otherwise
+     */
     public void question7 (View view) {
         boolean checked = ((RadioButton) view). isChecked();
         switch (view.getId()) {
@@ -328,6 +377,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     *
+     * @param view
+     * This method checks if the correct answer is chosen for question eight using switch statements
+     * It also adds to the score if the correct answer is chosen and does nothing otherwise
+     */
     public void question8 (View view) {
         boolean checked = ((RadioButton) view). isChecked();
         switch (view.getId()) {
@@ -360,6 +415,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     *
+     * @param view
+     * This method checks if the correct answer is chosen for question nine using switch statements
+     * It also adds to the score if the correct answer is chosen and does nothing otherwise
+     */
     public void question9 (View view) {
         boolean checked = ((RadioButton) view). isChecked();
         switch (view.getId()) {
@@ -392,6 +453,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     *
+     * @param view
+     * This method checks if the correct answer is chosen for question ten using switch statements
+     * It also adds to the score if the correct answer is chosen and does nothing otherwise
+     */
     public void question10 (View view) {
         boolean checked = ((RadioButton) view). isChecked();
         switch (view.getId()) {
