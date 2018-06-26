@@ -7,12 +7,11 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -73,19 +72,24 @@ public class MainActivity extends AppCompatActivity {
         if (score > 100) {
             score = 100;
         }
+        String messag = "Check the questions answered wrongly while app resets";
+        wrongAnswer();
         String order = endMessage(name, score);
         Toast res = Toast.makeText(this, order, Toast.LENGTH_LONG);
         res.setGravity(Gravity.CENTER, 0, 0);
         res.show();
-        Toast inf = Toast.makeText(this, "Resetting.........", Toast.LENGTH_SHORT);
+        Toast inf = Toast.makeText(this, messag, Toast.LENGTH_LONG);
         inf.setGravity(Gravity.CENTER, 0, 0);
         inf.show();
+        Toast inf2 = Toast.makeText(this, "Resetting..............", Toast.LENGTH_LONG);
+        inf2.setGravity(Gravity.CENTER, 0, 0);
+        inf2.show();
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 reset();
             }
-        }, 6000);
+        }, 15000);
     }
 
 
@@ -172,11 +176,104 @@ public class MainActivity extends AppCompatActivity {
         box3.setChecked(false);
         box4.setChecked(false);
         box5.setChecked(false);
+        ImageView wrong_1 = findViewById(R.id.wrong_1);
+        ImageView wrong_2 = findViewById(R.id.wrong_2);
+        ImageView wrong_3 = findViewById(R.id.wrong_3);
+        ImageView wrong_4 = findViewById(R.id.wrong_4);
+        ImageView wrong_5 = findViewById(R.id.wrong_5);
+        ImageView wrong_6 = findViewById(R.id.wrong_6);
+        ImageView wrong_7 = findViewById(R.id.wrong_7);
+        ImageView wrong_8 = findViewById(R.id.wrong_8);
+        ImageView wrong_9 = findViewById(R.id.wrong_9);
+        ImageView wrong_10 = findViewById(R.id.wrong_10);
+        wrong_1.setVisibility(View.INVISIBLE);
+        wrong_2.setVisibility(View.INVISIBLE);
+        wrong_3.setVisibility(View.INVISIBLE);
+        wrong_4.setVisibility(View.INVISIBLE);
+        wrong_5.setVisibility(View.INVISIBLE);
+        wrong_6.setVisibility(View.INVISIBLE);
+        wrong_7.setVisibility(View.INVISIBLE);
+        wrong_8.setVisibility(View.INVISIBLE);
+        wrong_9.setVisibility(View.INVISIBLE);
+        wrong_10.setVisibility(View.INVISIBLE);
         score = 0;
     }
 
+    /**
+     * This method indicates to the user questions that were answered wrongly
+     */
     public void wrongAnswer () {
-
+        RadioButton quest1a = findViewById(R.id.quest_1_id_a);
+        RadioButton quest1c = findViewById(R.id.quest_1_id_c);
+        RadioButton quest1d = findViewById(R.id.quest_1_id_d);
+        RadioButton quest2a = findViewById(R.id.quest_2_id_a);
+        RadioButton quest2b = findViewById(R.id.quest_2_id_b);
+        RadioButton quest2c = findViewById(R.id.quest_2_id_c);
+        RadioButton quest3b = findViewById(R.id.quest_3_id_b);
+        RadioButton quest3c = findViewById(R.id.quest_3_id_c);
+        RadioButton quest3d = findViewById(R.id.quest_3_id_d);
+        CheckBox box1 =  findViewById(R.id.quest_4_id_a);
+        CheckBox box2 =  findViewById(R.id.quest_4_id_b);
+        CheckBox box3 =  findViewById(R.id.quest_4_id_c);
+        CheckBox box4 =  findViewById(R.id.quest_4_id_d);
+        CheckBox box5 =  findViewById(R.id.quest_4_id_e);
+        RadioButton quest5a = findViewById(R.id.quest_5_id_a);
+        RadioButton quest5b = findViewById(R.id.quest_5_id_b);
+        RadioButton quest5c = findViewById(R.id.quest_5_id_c);
+        EditText quest6 = findViewById(R.id.quest_6_ans);
+        RadioButton quest7a = findViewById(R.id.quest_7_id_a);
+        RadioButton quest7b = findViewById(R.id.quest_7_id_b);
+        RadioButton quest7d = findViewById(R.id.quest_7_id_d);
+        RadioButton quest7e = findViewById(R.id.quest_7_id_e);
+        RadioButton quest8a = findViewById(R.id.quest_8_id_a);
+        RadioButton quest8b = findViewById(R.id.quest_8_id_b);
+        RadioButton quest8c = findViewById(R.id.quest_8_id_c);
+        RadioButton quest9a = findViewById(R.id.quest_9_id_a);
+        RadioButton quest9b = findViewById(R.id.quest_9_id_b);
+        RadioButton quest9d = findViewById(R.id.quest_9_id_d);
+        RadioButton quest10a = findViewById(R.id.quest_10_id_a);
+        RadioButton quest10c = findViewById(R.id.quest_10_id_c);
+        RadioButton quest10d = findViewById(R.id.quest_10_id_d);
+        if (quest1a.isChecked() || quest1c.isChecked() || quest1d.isChecked()) {
+            ImageView wrong_1 = findViewById(R.id.wrong_1);
+            wrong_1.setVisibility(View.VISIBLE);
+        }
+        if (quest2a.isChecked() || quest2b.isChecked() || quest2c.isChecked()) {
+            ImageView wrong_2 = findViewById(R.id.wrong_2);
+            wrong_2.setVisibility(View.VISIBLE);
+        }
+        if (quest3b.isChecked() || quest3c.isChecked() || quest3d.isChecked()) {
+            ImageView wrong_3 = findViewById(R.id.wrong_3);
+            wrong_3.setVisibility(View.VISIBLE);
+        }
+        if (!(box3.isChecked() && box5.isChecked() && !(box1.isChecked()) && !(box2.isChecked()) && !(box4.isChecked()))) {
+            ImageView wrong_4 = findViewById(R.id.wrong_4);
+            wrong_4.setVisibility(View.VISIBLE);
+        }
+        if (quest5b.isChecked() || quest5c.isChecked() || quest5a.isChecked()) {
+            ImageView wrong_5 = findViewById(R.id.wrong_5);
+            wrong_5.setVisibility(View.VISIBLE);
+        }
+        if (!( quest6.getText().toString().equals("Russia"))) {
+            ImageView wrong_6 = findViewById(R.id.wrong_6);
+            wrong_6.setVisibility(View.VISIBLE);
+        }
+        if (quest7b.isChecked() || quest7a.isChecked() || quest7d.isChecked() || quest7e.isChecked()) {
+            ImageView wrong_7 = findViewById(R.id.wrong_7);
+            wrong_7.setVisibility(View.VISIBLE);
+        }
+        if (quest8b.isChecked() || quest8c.isChecked() || quest8a.isChecked()) {
+            ImageView wrong_8 = findViewById(R.id.wrong_8);
+            wrong_8.setVisibility(View.VISIBLE);
+        }
+        if (quest9b.isChecked() || quest9a.isChecked() || quest9d.isChecked()) {
+            ImageView wrong_9 = findViewById(R.id.wrong_9);
+            wrong_9.setVisibility(View.VISIBLE);
+        }
+        if (quest10d.isChecked() || quest10c.isChecked() || quest10a.isChecked()) {
+            ImageView wrong_10 = findViewById(R.id.wrong_10);
+            wrong_10.setVisibility(View.VISIBLE);
+        }
     }
 
     /**
