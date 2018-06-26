@@ -9,6 +9,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class MainActivity extends AppCompatActivity {
 
     int score = 0;
@@ -65,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             score = 100;
         }
         String order = endMessage(name, score);
-        Toast.makeText(this, order, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, order, Toast.LENGTH_LONG).show();
         reset();
     }
 
@@ -123,37 +126,45 @@ public class MainActivity extends AppCompatActivity {
      * This method resets the app after all the questions have been submitted
      */
     public void reset () {
-        EditText text  =  findViewById(R.id.quest_6_ans);
-        text.setText(null);
-        EditText txt =  findViewById(R.id.name);
-        txt.setText(null);
-        RadioGroup questOne =  findViewById(R.id.quest_1);
-        RadioGroup questTwo =  findViewById(R.id.quest_2);
-        RadioGroup questThree =  findViewById(R.id.quest_3);
-        RadioGroup questFive =  findViewById(R.id.quest_5);
-        RadioGroup questSeven =  findViewById(R.id.quest_7);
-        RadioGroup questEight =  findViewById(R.id.quest_8);
-        RadioGroup questNine =  findViewById(R.id.quest_9);
-        RadioGroup questTen =  findViewById(R.id.quest_10);
-        questOne.clearCheck();
-        questTwo.clearCheck();
-        questThree.clearCheck();
-        questFive.clearCheck();
-        questSeven.clearCheck();
-        questEight.clearCheck();
-        questNine.clearCheck();
-        questTen.clearCheck();
-        CheckBox box1 =  findViewById(R.id.quest_4_id_a);
-        CheckBox box2 =  findViewById(R.id.quest_4_id_b);
-        CheckBox box3 =  findViewById(R.id.quest_4_id_c);
-        CheckBox box4 =  findViewById(R.id.quest_4_id_d);
-        CheckBox box5 =  findViewById(R.id.quest_4_id_e);
-        box1.setChecked(false);
-        box2.setChecked(false);
-        box3.setChecked(false);
-        box4.setChecked(false);
-        box5.setChecked(false);
-        score = 0;
+        new Timer().schedule(
+                new TimerTask() {
+                    @Override
+                    public void run() {
+                        EditText text  =  findViewById(R.id.quest_6_ans);
+                        text.setText(null);
+                        EditText txt =  findViewById(R.id.name);
+                        txt.setText(null);
+                        RadioGroup questOne =  findViewById(R.id.quest_1);
+                        RadioGroup questTwo =  findViewById(R.id.quest_2);
+                        RadioGroup questThree =  findViewById(R.id.quest_3);
+                        RadioGroup questFive =  findViewById(R.id.quest_5);
+                        RadioGroup questSeven =  findViewById(R.id.quest_7);
+                        RadioGroup questEight =  findViewById(R.id.quest_8);
+                        RadioGroup questNine =  findViewById(R.id.quest_9);
+                        RadioGroup questTen =  findViewById(R.id.quest_10);
+                        questOne.clearCheck();
+                        questTwo.clearCheck();
+                        questThree.clearCheck();
+                        questFive.clearCheck();
+                        questSeven.clearCheck();
+                        questEight.clearCheck();
+                        questNine.clearCheck();
+                        questTen.clearCheck();
+                        CheckBox box1 =  findViewById(R.id.quest_4_id_a);
+                        CheckBox box2 =  findViewById(R.id.quest_4_id_b);
+                        CheckBox box3 =  findViewById(R.id.quest_4_id_c);
+                        CheckBox box4 =  findViewById(R.id.quest_4_id_d);
+                        CheckBox box5 =  findViewById(R.id.quest_4_id_e);
+                        box1.setChecked(false);
+                        box2.setChecked(false);
+                        box3.setChecked(false);
+                        box4.setChecked(false);
+                        box5.setChecked(false);
+                        score = 0;
+                    }
+                },
+                5000
+        );
     }
 
     /**
