@@ -77,6 +77,9 @@ public class MainActivity extends AppCompatActivity {
         Toast res = Toast.makeText(this, order, Toast.LENGTH_LONG);
         res.setGravity(Gravity.CENTER, 0, 0);
         res.show();
+        Toast inf = Toast.makeText(this, "Resetting.........", Toast.LENGTH_SHORT);
+        inf.setGravity(Gravity.CENTER, 0, 0);
+        inf.show();
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -170,6 +173,10 @@ public class MainActivity extends AppCompatActivity {
         box4.setChecked(false);
         box5.setChecked(false);
         score = 0;
+    }
+
+    public void wrongAnswer () {
+
     }
 
     /**
