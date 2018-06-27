@@ -393,7 +393,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      *
      * @param view
-     * This method checks if the correct answer is chosen for question four using switch statements
+     * This method checks if the correct answer is chosen for question four
      * It also adds to the score if the correct answer is chosen and does nothing otherwise
      */
     public void question4 (View view) {
