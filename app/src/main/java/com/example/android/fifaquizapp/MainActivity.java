@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 reset();
             }
-        }, 13000);
+        }, 15000);
     }
 
 

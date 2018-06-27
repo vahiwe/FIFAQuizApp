@@ -1019,26 +1019,29 @@
 
         </LinearLayout>
 
-
-        <Button
-            android:layout_width="180dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="55dp"
-            android:layout_marginRight="55dp"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/button"
-            android:shadowColor="#F5EED5"
-            android:shadowDx="0"
-            android:shadowDy="0"
-            android:shadowRadius="5"
-            android:onClick="order"
-            android:text="Submit"
-            android:textAllCaps="true"
-            android:textColor="#171714"
-            android:textSize="28sp"
-            android:textStyle="bold" />
+            android:gravity="center_horizontal">
 
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/button"
+                android:shadowColor="#F5EED5"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:onClick="order"
+                android:text="Submit"
+                android:textAllCaps="true"
+                android:textColor="#171714"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
