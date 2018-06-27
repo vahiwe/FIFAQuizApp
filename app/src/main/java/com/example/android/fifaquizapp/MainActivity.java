@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             chek.show();
             return;
         }
-        if (ans.equals("Russia")) {
+        if (ans.trim().equalsIgnoreCase("russia")) {
             score += 10;
         }
         if (score > 100) {
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 reset();
             }
-        }, 15000);
+        }, 13000);
     }
 
 
@@ -254,7 +254,7 @@ public class MainActivity extends AppCompatActivity {
             ImageView wrong_5 = findViewById(R.id.wrong_5);
             wrong_5.setVisibility(View.VISIBLE);
         }
-        if (!( quest6.getText().toString().equals("Russia"))) {
+        if (!( quest6.getText().toString().trim().equalsIgnoreCase("russia"))) {
             ImageView wrong_6 = findViewById(R.id.wrong_6);
             wrong_6.setVisibility(View.VISIBLE);
         }
