@@ -19,6 +19,10 @@ An android phone operating on Android 4.0 and above
 
 * **Ahiwe Onyebuchi Valentine** - *Initial work* - [FIFAQuizApp](https://github.com/vahiwe/FIFAQuizApp)
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
 ## Acknowledgments
 
 * Thanks to Udacity, Google and Andela for giving me this opportunity to learn about coding android apps
