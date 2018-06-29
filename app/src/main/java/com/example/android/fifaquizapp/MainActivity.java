@@ -72,15 +72,21 @@ public class MainActivity extends AppCompatActivity {
         if (score > 100) {
             score = 100;
         }
-        String messag = "Check the questions answered wrongly while app resets";
+        String messag = "Check the questions answered wrongly while app resets!!!";
         wrongAnswer();
         String order = endMessage(name, score);
         Toast res = Toast.makeText(this, order, Toast.LENGTH_LONG);
         res.setGravity(Gravity.CENTER, 0, 0);
         res.show();
-        Toast inf = Toast.makeText(this, messag, Toast.LENGTH_LONG);
-        inf.setGravity(Gravity.CENTER, 0, 0);
-        inf.show();
+        if (score < 100) {
+            Toast inf = Toast.makeText(this, messag, Toast.LENGTH_LONG);
+            inf.setGravity(Gravity.CENTER, 0, 0);
+            inf.show();
+        } else {
+            Toast inf = Toast.makeText(this, "Wait while app resets!!!", Toast.LENGTH_LONG);
+            inf.setGravity(Gravity.CENTER, 0, 0);
+            inf.show();
+        }
         Toast inf2 = Toast.makeText(this, "Resetting..............", Toast.LENGTH_LONG);
         inf2.setGravity(Gravity.CENTER, 0, 0);
         inf2.show();
