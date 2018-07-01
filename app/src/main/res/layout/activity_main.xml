@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <LinearLayout
@@ -25,7 +25,7 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginTop="16dp"
-                android:hint="Name"
+                android:hint="@string/name"
                 android:inputType="textCapWords"
                 android:textColor="#e5c685"
                 android:textColorHint="#808080" />
@@ -52,7 +52,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="16dp"
                         android:lineSpacingExtra="5dp"
-                        android:text="1. What country is FIFA headquartered in?"
+                        android:text="@string/quest1"
                         android:textColor="#171714" />
 
                     <LinearLayout
@@ -76,7 +76,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question1"
                                 android:paddingLeft="4dp"
-                                android:text="Italy" />
+                                android:text="@string/quest1a" />
 
 
                             <RadioButton
@@ -88,7 +88,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question1"
                                 android:paddingLeft="4dp"
-                                android:text="Switzerland" />
+                                android:text="@string/quest1b" />
 
 
                             <RadioButton
@@ -100,7 +100,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question1"
                                 android:paddingLeft="4dp"
-                                android:text="Brazil" />
+                                android:text="@string/quest1c" />
 
 
                             <RadioButton
@@ -112,7 +112,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question1"
                                 android:paddingLeft="4dp"
-                                android:text="Spain" />
+                                android:text="@string/quest1d" />
                         </RadioGroup>
 
                         <ImageView
@@ -154,7 +154,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="16dp"
                         android:lineSpacingExtra="5dp"
-                        android:text="2. How many teams will participate in this year’s World Cup?"
+                        android:text="@string/quest2"
                         android:textColor="#171714" />
 
                     <LinearLayout
@@ -178,7 +178,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question2"
                                 android:paddingLeft="4dp"
-                                android:text="13" />
+                                android:text="@string/quest2a" />
 
 
                             <RadioButton
@@ -190,7 +190,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question2"
                                 android:paddingLeft="4dp"
-                                android:text="18" />
+                                android:text="@string/quest2b" />
 
 
                             <RadioButton
@@ -202,7 +202,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question2"
                                 android:paddingLeft="4dp"
-                                android:text="24" />
+                                android:text="@string/quest2c" />
 
 
                             <RadioButton
@@ -214,7 +214,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question2"
                                 android:paddingLeft="4dp"
-                                android:text="32" />
+                                android:text="@string/quest2d" />
                         </RadioGroup>
 
                         <ImageView
@@ -256,7 +256,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="16dp"
                         android:lineSpacingExtra="5dp"
-                        android:text="3. How many teams participated in the first World Cup?"
+                        android:text="@string/quest3"
                         android:textColor="#171714" />
 
                     <LinearLayout
@@ -280,7 +280,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question3"
                                 android:paddingLeft="4dp"
-                                android:text="13" />
+                                android:text="@string/quest3a" />
 
 
                             <RadioButton
@@ -292,7 +292,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question3"
                                 android:paddingLeft="4dp"
-                                android:text="18" />
+                                android:text="@string/quest3b" />
 
 
                             <RadioButton
@@ -304,7 +304,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question3"
                                 android:paddingLeft="4dp"
-                                android:text="24" />
+                                android:text="@string/quest3c" />
 
 
                             <RadioButton
@@ -316,7 +316,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question3"
                                 android:paddingLeft="4dp"
-                                android:text="32" />
+                                android:text="@string/quest3d" />
                         </RadioGroup>
 
                         <ImageView
@@ -356,7 +356,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="16dp"
                         android:lineSpacingExtra="5dp"
-                        android:text="4. What two nations have won consecutive World Cup titles?"
+                        android:text="@string/quest4"
                         android:textColor="#171714" />
 
                     <LinearLayout
@@ -379,7 +379,7 @@
                                 android:layout_margin="16dp"
                                 android:onClick="question4"
                                 android:paddingLeft="4dp"
-                                android:text="Spain" />
+                                android:text="@string/quest4a" />
 
                             <CheckBox
                                 android:id="@+id/quest_4_id_b"
@@ -390,7 +390,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question4"
                                 android:paddingLeft="4dp"
-                                android:text="France" />
+                                android:text="@string/quest4b" />
 
                             <CheckBox
                                 android:id="@+id/quest_4_id_c"
@@ -401,7 +401,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question4"
                                 android:paddingLeft="4dp"
-                                android:text="Italy" />
+                                android:text="@string/quest4c" />
 
                             <CheckBox
                                 android:id="@+id/quest_4_id_d"
@@ -412,7 +412,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question4"
                                 android:paddingLeft="4dp"
-                                android:text="Germany" />
+                                android:text="@string/quest4d" />
 
                             <CheckBox
                                 android:id="@+id/quest_4_id_e"
@@ -423,7 +423,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question4"
                                 android:paddingLeft="4dp"
-                                android:text="Brazil" />
+                                android:text="@string/quest4e" />
 
                         </LinearLayout>
 
@@ -464,7 +464,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="16dp"
                         android:lineSpacingExtra="5dp"
-                        android:text="5. What nation has played in every world cup?"
+                        android:text="@string/quest5"
                         android:textColor="#171714" />
 
                     <LinearLayout
@@ -488,7 +488,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question5"
                                 android:paddingLeft="4dp"
-                                android:text="Spain" />
+                                android:text="@string/quest5a" />
 
 
                             <RadioButton
@@ -500,7 +500,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question5"
                                 android:paddingLeft="4dp"
-                                android:text="Germany" />
+                                android:text="@string/quest5b" />
 
 
                             <RadioButton
@@ -512,7 +512,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question5"
                                 android:paddingLeft="4dp"
-                                android:text="Italy" />
+                                android:text="@string/quest5c" />
 
 
                             <RadioButton
@@ -524,7 +524,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question5"
                                 android:paddingLeft="4dp"
-                                android:text="Brazil" />
+                                android:text="@string/quest5d" />
                         </RadioGroup>
 
                         <ImageView
@@ -565,7 +565,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="16dp"
                         android:lineSpacingExtra="5dp"
-                        android:text="6. Where is the 2018 World Cup taking place?"
+                        android:text="@string/quest6"
                         android:textColor="#171714" />
 
                     <LinearLayout
@@ -581,7 +581,7 @@
                             android:layout_marginLeft="16dp"
                             android:layout_marginRight="16dp"
                             android:layout_weight="1"
-                            android:hint="Country"
+                            android:hint="@string/quest6ans"
                             android:inputType="textCapWords"
                             android:textColorHint="#A9A9A9" />
 
@@ -621,7 +621,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="16dp"
                         android:lineSpacingExtra="5dp"
-                        android:text="7. Which African country has competed in 7 World Cups, the most of any African country?"
+                        android:text="@string/quest7"
                         android:textColor="#171714" />
 
                     <LinearLayout
@@ -645,7 +645,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question7"
                                 android:paddingLeft="4dp"
-                                android:text="Nigeria" />
+                                android:text="@string/quest7a" />
 
 
                             <RadioButton
@@ -657,7 +657,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question7"
                                 android:paddingLeft="4dp"
-                                android:text="Morocco" />
+                                android:text="@string/quest7b" />
 
 
                             <RadioButton
@@ -669,7 +669,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question7"
                                 android:paddingLeft="4dp"
-                                android:text="Cameroon" />
+                                android:text="@string/quest7c" />
 
 
                             <RadioButton
@@ -681,7 +681,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question7"
                                 android:paddingLeft="4dp"
-                                android:text="Ghana" />
+                                android:text="@string/quest7d" />
 
                             <RadioButton
                                 android:id="@+id/quest_7_id_e"
@@ -692,7 +692,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question7"
                                 android:paddingLeft="4dp"
-                                android:text="Ivory Coast" />
+                                android:text="@string/quest7e" />
                         </RadioGroup>
 
                         <ImageView
@@ -734,7 +734,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="16dp"
                         android:lineSpacingExtra="5dp"
-                        android:text="8. Who holds the all-time record for the most number of goals scored during World Cup?"
+                        android:text="@string/quest8"
                         android:textColor="#171714" />
 
                     <LinearLayout
@@ -758,7 +758,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question8"
                                 android:paddingLeft="4dp"
-                                android:text="De Lima Ronaldo" />
+                                android:text="@string/quest8a" />
 
 
                             <RadioButton
@@ -770,7 +770,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question8"
                                 android:paddingLeft="4dp"
-                                android:text="Pele" />
+                                android:text="@string/quest8b" />
 
 
                             <RadioButton
@@ -782,7 +782,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question8"
                                 android:paddingLeft="4dp"
-                                android:text="Maradona" />
+                                android:text="@string/quest8c" />
 
 
                             <RadioButton
@@ -794,7 +794,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question8"
                                 android:paddingLeft="4dp"
-                                android:text="Miroslav Klose" />
+                                android:text="@string/quest8d" />
                         </RadioGroup>
 
                         <ImageView
@@ -835,7 +835,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="16dp"
                         android:lineSpacingExtra="5dp"
-                        android:text="9. Who is the only player to win three World Cups?"
+                        android:text="@string/quest9"
                         android:textColor="#171714" />
 
                     <LinearLayout
@@ -859,7 +859,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question9"
                                 android:paddingLeft="4dp"
-                                android:text="Maradona" />
+                                android:text="@string/quest9a" />
 
 
                             <RadioButton
@@ -871,7 +871,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question9"
                                 android:paddingLeft="4dp"
-                                android:text="Miroslav Klose" />
+                                android:text="@string/quest9b" />
 
 
                             <RadioButton
@@ -883,7 +883,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question9"
                                 android:paddingLeft="4dp"
-                                android:text="Pele" />
+                                android:text="@string/quest9c" />
 
 
                             <RadioButton
@@ -895,7 +895,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question9"
                                 android:paddingLeft="4dp"
-                                android:text="De Lima Ronaldo" />
+                                android:text="@string/quest9d" />
                         </RadioGroup>
 
                         <ImageView
@@ -936,7 +936,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="16dp"
                         android:lineSpacingExtra="5dp"
-                        android:text="10. What country has finished in second place three times but has never won a World Cup?"
+                        android:text="@string/quest10"
                         android:textColor="#171714" />
 
                     <LinearLayout
@@ -960,7 +960,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question10"
                                 android:paddingLeft="4dp"
-                                android:text="Bulgaria" />
+                                android:text="@string/quest10a" />
 
 
                             <RadioButton
@@ -972,7 +972,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question10"
                                 android:paddingLeft="4dp"
-                                android:text="Netherlands" />
+                                android:text="@string/quest10b" />
 
 
                             <RadioButton
@@ -984,7 +984,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question10"
                                 android:paddingLeft="4dp"
-                                android:text="Austria" />
+                                android:text="@string/quest10c" />
 
 
                             <RadioButton
@@ -996,7 +996,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:onClick="question10"
                                 android:paddingLeft="4dp"
-                                android:text="Belgium" />
+                                android:text="@string/quest10d" />
                         </RadioGroup>
 
                         <ImageView
@@ -1035,7 +1035,7 @@
                 android:shadowDx="0"
                 android:shadowDy="0"
                 android:shadowRadius="5"
-                android:text="Submit"
+                android:text="@string/submit"
                 android:textAllCaps="true"
                 android:textColor="#171714"
                 android:textSize="28sp"
