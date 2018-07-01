@@ -9,7 +9,7 @@ An android phone operating on Android 4.0 and above
 ### Installation
 
 * Clone the repo on your android studio and build it. Then you can install the apk on your phone
-* You can also download the apk file of the application here on [Google Drive](https://drive.google.com/open?id=1f0iISVojtvCC4Num20BpK8bfUTQ5NPgb)
+* You can also download the apk file of the application here on [Google Drive](https://drive.google.com/open?id=1xWlSxydT2HgTtkB4xZ24zTygnvnVy08O)
 
 ## Built With
 
