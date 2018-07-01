@@ -24,17 +24,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *
-     * @param view
-     * This is the method that controls the submit button action
-     * It validates that all questions are answered and that a name is filled
-     * Before displaying a toast with name, score and a short message that changes with each score
-     * It also checks the correct answer for number 6
+     * @param view This is the method that controls the submit button action
+     *             It validates that all questions are answered and that a name is filled
+     *             Before displaying a toast with name, score and a short message that changes with each score
+     *             It also checks the correct answer for number 6
      */
-    public void order (View view) {
-        EditText text =  findViewById(R.id.name);
+    public void order(View view) {
+        EditText text = findViewById(R.id.name);
         String name = text.getText().toString();
-        EditText ansSix =  findViewById(R.id.quest_6_ans);
+        EditText ansSix = findViewById(R.id.quest_6_ans);
         String ans = ansSix.getText().toString();
         if (name.trim().equals("")) {
             Toast nam = Toast.makeText(this, "Please enter your name!!! ", Toast.LENGTH_SHORT);
@@ -42,19 +40,19 @@ public class MainActivity extends AppCompatActivity {
             nam.show();
             return;
         }
-        RadioGroup questOne =  findViewById(R.id.quest_1);
-        RadioGroup questTwo =  findViewById(R.id.quest_2);
-        RadioGroup questThree =  findViewById(R.id.quest_3);
-        RadioGroup questFive =  findViewById(R.id.quest_5);
-        RadioGroup questSeven =  findViewById(R.id.quest_7);
-        RadioGroup questEight =  findViewById(R.id.quest_8);
-        RadioGroup questNine =  findViewById(R.id.quest_9);
-        RadioGroup questTen =  findViewById(R.id.quest_10);
-        CheckBox box1 =  findViewById(R.id.quest_4_id_a);
-        CheckBox box2 =  findViewById(R.id.quest_4_id_b);
-        CheckBox box3 =  findViewById(R.id.quest_4_id_c);
-        CheckBox box4 =  findViewById(R.id.quest_4_id_d);
-        CheckBox box5 =  findViewById(R.id.quest_4_id_e);
+        RadioGroup questOne = findViewById(R.id.quest_1);
+        RadioGroup questTwo = findViewById(R.id.quest_2);
+        RadioGroup questThree = findViewById(R.id.quest_3);
+        RadioGroup questFive = findViewById(R.id.quest_5);
+        RadioGroup questSeven = findViewById(R.id.quest_7);
+        RadioGroup questEight = findViewById(R.id.quest_8);
+        RadioGroup questNine = findViewById(R.id.quest_9);
+        RadioGroup questTen = findViewById(R.id.quest_10);
+        CheckBox box1 = findViewById(R.id.quest_4_id_a);
+        CheckBox box2 = findViewById(R.id.quest_4_id_b);
+        CheckBox box3 = findViewById(R.id.quest_4_id_c);
+        CheckBox box4 = findViewById(R.id.quest_4_id_d);
+        CheckBox box5 = findViewById(R.id.quest_4_id_e);
         if ((questOne.getCheckedRadioButtonId() == -1) || (questTwo.getCheckedRadioButtonId() == -1) || (questThree.getCheckedRadioButtonId() == -1)
                 || (questFive.getCheckedRadioButtonId() == -1)
                 || (ans.trim().equals("")) || (questSeven.getCheckedRadioButtonId() == -1)
@@ -100,14 +98,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     *
-     * @param name {int}
+     * @param name  {int}
      * @param score {String}
-     * @return
-     * This method returns the final message for the toast using score and name
+     * @return This method returns the final message for the toast using score and name
      * It also generates different replies based on your score using switch statements
      */
-    public String endMessage (String name, int score) {
+    public String endMessage(String name, int score) {
         String message = "HI, " + name;
         message += "\nYou scored " + score + "%\n";
         switch (score) {
@@ -151,19 +147,19 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method resets the app after all the questions have been submitted
      */
-    public void reset () {
-        EditText text  =  findViewById(R.id.quest_6_ans);
+    public void reset() {
+        EditText text = findViewById(R.id.quest_6_ans);
         text.setText(null);
-        EditText txt =  findViewById(R.id.name);
+        EditText txt = findViewById(R.id.name);
         txt.setText(null);
-        RadioGroup questOne =  findViewById(R.id.quest_1);
-        RadioGroup questTwo =  findViewById(R.id.quest_2);
-        RadioGroup questThree =  findViewById(R.id.quest_3);
-        RadioGroup questFive =  findViewById(R.id.quest_5);
-        RadioGroup questSeven =  findViewById(R.id.quest_7);
-        RadioGroup questEight =  findViewById(R.id.quest_8);
-        RadioGroup questNine =  findViewById(R.id.quest_9);
-        RadioGroup questTen =  findViewById(R.id.quest_10);
+        RadioGroup questOne = findViewById(R.id.quest_1);
+        RadioGroup questTwo = findViewById(R.id.quest_2);
+        RadioGroup questThree = findViewById(R.id.quest_3);
+        RadioGroup questFive = findViewById(R.id.quest_5);
+        RadioGroup questSeven = findViewById(R.id.quest_7);
+        RadioGroup questEight = findViewById(R.id.quest_8);
+        RadioGroup questNine = findViewById(R.id.quest_9);
+        RadioGroup questTen = findViewById(R.id.quest_10);
         questOne.clearCheck();
         questTwo.clearCheck();
         questThree.clearCheck();
@@ -172,11 +168,11 @@ public class MainActivity extends AppCompatActivity {
         questEight.clearCheck();
         questNine.clearCheck();
         questTen.clearCheck();
-        CheckBox box1 =  findViewById(R.id.quest_4_id_a);
-        CheckBox box2 =  findViewById(R.id.quest_4_id_b);
-        CheckBox box3 =  findViewById(R.id.quest_4_id_c);
-        CheckBox box4 =  findViewById(R.id.quest_4_id_d);
-        CheckBox box5 =  findViewById(R.id.quest_4_id_e);
+        CheckBox box1 = findViewById(R.id.quest_4_id_a);
+        CheckBox box2 = findViewById(R.id.quest_4_id_b);
+        CheckBox box3 = findViewById(R.id.quest_4_id_c);
+        CheckBox box4 = findViewById(R.id.quest_4_id_d);
+        CheckBox box5 = findViewById(R.id.quest_4_id_e);
         box1.setChecked(false);
         box2.setChecked(false);
         box3.setChecked(false);
@@ -206,9 +202,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method indicates to the user questions that were answered wrongly
+     * This method indicates to the user the questions that were answered wrongly
      */
-    public void wrongAnswer () {
+    public void wrongAnswer() {
         RadioButton quest1a = findViewById(R.id.quest_1_id_a);
         RadioButton quest1c = findViewById(R.id.quest_1_id_c);
         RadioButton quest1d = findViewById(R.id.quest_1_id_d);
@@ -218,11 +214,11 @@ public class MainActivity extends AppCompatActivity {
         RadioButton quest3b = findViewById(R.id.quest_3_id_b);
         RadioButton quest3c = findViewById(R.id.quest_3_id_c);
         RadioButton quest3d = findViewById(R.id.quest_3_id_d);
-        CheckBox box1 =  findViewById(R.id.quest_4_id_a);
-        CheckBox box2 =  findViewById(R.id.quest_4_id_b);
-        CheckBox box3 =  findViewById(R.id.quest_4_id_c);
-        CheckBox box4 =  findViewById(R.id.quest_4_id_d);
-        CheckBox box5 =  findViewById(R.id.quest_4_id_e);
+        CheckBox box1 = findViewById(R.id.quest_4_id_a);
+        CheckBox box2 = findViewById(R.id.quest_4_id_b);
+        CheckBox box3 = findViewById(R.id.quest_4_id_c);
+        CheckBox box4 = findViewById(R.id.quest_4_id_d);
+        CheckBox box5 = findViewById(R.id.quest_4_id_e);
         RadioButton quest5a = findViewById(R.id.quest_5_id_a);
         RadioButton quest5b = findViewById(R.id.quest_5_id_b);
         RadioButton quest5c = findViewById(R.id.quest_5_id_c);
@@ -260,7 +256,7 @@ public class MainActivity extends AppCompatActivity {
             ImageView wrong_5 = findViewById(R.id.wrong_5);
             wrong_5.setVisibility(View.VISIBLE);
         }
-        if (!( quest6.getText().toString().trim().equalsIgnoreCase("russia"))) {
+        if (!(quest6.getText().toString().trim().equalsIgnoreCase("russia"))) {
             ImageView wrong_6 = findViewById(R.id.wrong_6);
             wrong_6.setVisibility(View.VISIBLE);
         }
@@ -283,17 +279,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *
-     * @param view
-     * This method checks if the correct answer is chosen for question one using switch statements
-     * It also adds to the score if the correct answer is chosen and does nothing otherwise
+     * @param view This method checks if the correct answer is chosen for question one using switch statements
+     *             It also adds to the score if the correct answer is chosen and does nothing otherwise
      */
-    public void question1 (View view) {
-        boolean checked = ((RadioButton) view). isChecked();
+    public void question1(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
         switch (view.getId()) {
             case R.id.quest_1_id_a:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
@@ -306,14 +299,12 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.quest_1_id_c:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
 
             case R.id.quest_1_id_d:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
@@ -321,31 +312,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *
-     * @param view
-     * This method checks if the correct answer is chosen for question two using switch statements
-     * It also adds to the score if the correct answer is chosen and does nothing otherwise
+     * @param view This method checks if the correct answer is chosen for question two using switch statements
+     *             It also adds to the score if the correct answer is chosen and does nothing otherwise
      */
-    public void question2 (View view) {
-        boolean checked = ((RadioButton) view). isChecked();
+    public void question2(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
         switch (view.getId()) {
             case R.id.quest_2_id_a:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
 
             case R.id.quest_2_id_b:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
 
             case R.id.quest_2_id_c:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
@@ -359,13 +345,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *
-     * @param view
-     * This method checks if the correct answer is chosen for question three using switch statements
-     * It also adds to the score if the correct answer is chosen and does nothing otherwise
+     * @param view This method checks if the correct answer is chosen for question three using switch statements
+     *             It also adds to the score if the correct answer is chosen and does nothing otherwise
      */
-    public void question3 (View view) {
-        boolean checked = ((RadioButton) view). isChecked();
+    public void question3(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
         switch (view.getId()) {
             case R.id.quest_3_id_a:
                 if (checked) {
@@ -375,21 +359,18 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.quest_3_id_b:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
 
             case R.id.quest_3_id_c:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
 
             case R.id.quest_3_id_d:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
@@ -397,17 +378,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *
-     * @param view
-     * This method checks if the correct answer is chosen for question four
-     * It also adds to the score if the correct answer is chosen and does nothing otherwise
+     * @param view This method checks if the correct answer is chosen for question four
+     *             It also adds to the score if the correct answer is chosen and does nothing otherwise
      */
-    public void question4 (View view) {
-        CheckBox box1 =  findViewById(R.id.quest_4_id_a);
-        CheckBox box2 =  findViewById(R.id.quest_4_id_b);
-        CheckBox box3 =  findViewById(R.id.quest_4_id_c);
-        CheckBox box4 =  findViewById(R.id.quest_4_id_d);
-        CheckBox box5 =  findViewById(R.id.quest_4_id_e);
+    public void question4(View view) {
+        CheckBox box1 = findViewById(R.id.quest_4_id_a);
+        CheckBox box2 = findViewById(R.id.quest_4_id_b);
+        CheckBox box3 = findViewById(R.id.quest_4_id_c);
+        CheckBox box4 = findViewById(R.id.quest_4_id_d);
+        CheckBox box5 = findViewById(R.id.quest_4_id_e);
         boolean val1 = box1.isChecked();
         boolean val2 = box2.isChecked();
         boolean val3 = box3.isChecked();
@@ -421,31 +400,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *
-     * @param view
-     * This method checks if the correct answer is chosen for question five using switch statements
-     * It also adds to the score if the correct answer is chosen and does nothing otherwise
+     * @param view This method checks if the correct answer is chosen for question five using switch statements
+     *             It also adds to the score if the correct answer is chosen and does nothing otherwise
      */
-    public void question5 (View view) {
-        boolean checked = ((RadioButton) view). isChecked();
+    public void question5(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
         switch (view.getId()) {
             case R.id.quest_5_id_a:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
 
             case R.id.quest_5_id_b:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
 
             case R.id.quest_5_id_c:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
@@ -459,24 +433,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *
-     * @param view
-     * This method checks if the correct answer is chosen for question seven using switch statements
-     * It also adds to the score if the correct answer is chosen and does nothing otherwise
+     * @param view This method checks if the correct answer is chosen for question seven using switch statements
+     *             It also adds to the score if the correct answer is chosen and does nothing otherwise
      */
-    public void question7 (View view) {
-        boolean checked = ((RadioButton) view). isChecked();
+    public void question7(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
         switch (view.getId()) {
             case R.id.quest_7_id_a:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
 
             case R.id.quest_7_id_b:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
@@ -489,14 +459,12 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.quest_7_id_d:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
 
             case R.id.quest_7_id_e:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
@@ -504,31 +472,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *
-     * @param view
-     * This method checks if the correct answer is chosen for question eight using switch statements
-     * It also adds to the score if the correct answer is chosen and does nothing otherwise
+     * @param view This method checks if the correct answer is chosen for question eight using switch statements
+     *             It also adds to the score if the correct answer is chosen and does nothing otherwise
      */
-    public void question8 (View view) {
-        boolean checked = ((RadioButton) view). isChecked();
+    public void question8(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
         switch (view.getId()) {
             case R.id.quest_8_id_a:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
 
             case R.id.quest_8_id_b:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
 
             case R.id.quest_8_id_c:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
@@ -542,24 +505,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *
-     * @param view
-     * This method checks if the correct answer is chosen for question nine using switch statements
-     * It also adds to the score if the correct answer is chosen and does nothing otherwise
+     * @param view This method checks if the correct answer is chosen for question nine using switch statements
+     *             It also adds to the score if the correct answer is chosen and does nothing otherwise
      */
-    public void question9 (View view) {
-        boolean checked = ((RadioButton) view). isChecked();
+    public void question9(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
         switch (view.getId()) {
             case R.id.quest_9_id_a:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
 
             case R.id.quest_9_id_b:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
@@ -572,7 +531,6 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.quest_9_id_d:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
@@ -580,17 +538,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *
-     * @param view
-     * This method checks if the correct answer is chosen for question ten using switch statements
-     * It also adds to the score if the correct answer is chosen and does nothing otherwise
+     * @param view This method checks if the correct answer is chosen for question ten using switch statements
+     *             It also adds to the score if the correct answer is chosen and does nothing otherwise
      */
-    public void question10 (View view) {
-        boolean checked = ((RadioButton) view). isChecked();
+    public void question10(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
         switch (view.getId()) {
             case R.id.quest_10_id_a:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
@@ -603,14 +558,12 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.quest_10_id_c:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;
 
             case R.id.quest_10_id_d:
                 if (checked) {
-                    //score += 0;
                     return;
                 }
                 break;

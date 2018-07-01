@@ -119,11 +119,11 @@
                             android:id="@+id/wrong_1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_marginTop="15dp"
-                            android:visibility="invisible"
+                            android:layout_weight="1"
                             android:src="@drawable/ic_clear_black_24dp"
-                            android:tint="@color/colorPrimary"/>
+                            android:tint="@color/colorPrimary"
+                            android:visibility="invisible" />
 
 
                     </LinearLayout>
@@ -221,11 +221,11 @@
                             android:id="@+id/wrong_2"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_marginTop="15dp"
-                            android:visibility="invisible"
+                            android:layout_weight="1"
                             android:src="@drawable/ic_clear_black_24dp"
-                            android:tint="@color/colorPrimary"/>
+                            android:tint="@color/colorPrimary"
+                            android:visibility="invisible" />
 
                     </LinearLayout>
 
@@ -323,11 +323,11 @@
                             android:id="@+id/wrong_3"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_marginTop="15dp"
-                            android:visibility="invisible"
+                            android:layout_weight="1"
                             android:src="@drawable/ic_clear_black_24dp"
-                            android:tint="@color/colorPrimary"/>
+                            android:tint="@color/colorPrimary"
+                            android:visibility="invisible" />
 
                     </LinearLayout>
 
@@ -433,9 +433,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
                             android:layout_weight="1"
-                            android:visibility="invisible"
                             android:src="@drawable/ic_clear_black_24dp"
-                            android:tint="@color/colorPrimary"/>
+                            android:tint="@color/colorPrimary"
+                            android:visibility="invisible" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -531,11 +531,11 @@
                             android:id="@+id/wrong_5"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_marginTop="15dp"
-                            android:visibility="invisible"
+                            android:layout_weight="1"
                             android:src="@drawable/ic_clear_black_24dp"
-                            android:tint="@color/colorPrimary"/>
+                            android:tint="@color/colorPrimary"
+                            android:visibility="invisible" />
                     </LinearLayout>
 
 
@@ -582,17 +582,17 @@
                             android:layout_marginRight="16dp"
                             android:layout_weight="1"
                             android:hint="Country"
-                            android:textColorHint="#A9A9A9"
-                            android:inputType="textCapWords" />
+                            android:inputType="textCapWords"
+                            android:textColorHint="#A9A9A9" />
 
                         <ImageView
                             android:id="@+id/wrong_6"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:visibility="invisible"
                             android:src="@drawable/ic_clear_black_25dp"
-                            android:tint="@color/colorPrimary"/>
+                            android:tint="@color/colorPrimary"
+                            android:visibility="invisible" />
 
                     </LinearLayout>
 
@@ -699,11 +699,11 @@
                             android:id="@+id/wrong_7"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_marginTop="20dp"
-                            android:visibility="invisible"
+                            android:layout_weight="1"
                             android:src="@drawable/ic_clear_black_24dp"
-                            android:tint="@color/colorPrimary"/>
+                            android:tint="@color/colorPrimary"
+                            android:visibility="invisible" />
 
 
                     </LinearLayout>
@@ -801,11 +801,11 @@
                             android:id="@+id/wrong_8"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_marginTop="15dp"
-                            android:visibility="invisible"
+                            android:layout_weight="1"
                             android:src="@drawable/ic_clear_black_24dp"
-                            android:tint="@color/colorPrimary"/>
+                            android:tint="@color/colorPrimary"
+                            android:visibility="invisible" />
 
 
                     </LinearLayout>
@@ -902,11 +902,11 @@
                             android:id="@+id/wrong_9"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_marginTop="15dp"
-                            android:visibility="invisible"
+                            android:layout_weight="1"
                             android:src="@drawable/ic_clear_black_24dp"
-                            android:tint="@color/colorPrimary"/>
+                            android:tint="@color/colorPrimary"
+                            android:visibility="invisible" />
 
                     </LinearLayout>
 
@@ -1003,11 +1003,11 @@
                             android:id="@+id/wrong_10"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_marginTop="15dp"
-                            android:visibility="invisible"
+                            android:layout_weight="1"
                             android:src="@drawable/ic_clear_black_24dp"
-                            android:tint="@color/colorPrimary"/>
+                            android:tint="@color/colorPrimary"
+                            android:visibility="invisible" />
 
                     </LinearLayout>
 
@@ -1030,11 +1030,11 @@
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="25dp"
                 android:background="@drawable/button"
+                android:onClick="order"
                 android:shadowColor="#F5EED5"
                 android:shadowDx="0"
                 android:shadowDy="0"
                 android:shadowRadius="5"
-                android:onClick="order"
                 android:text="Submit"
                 android:textAllCaps="true"
                 android:textColor="#171714"
