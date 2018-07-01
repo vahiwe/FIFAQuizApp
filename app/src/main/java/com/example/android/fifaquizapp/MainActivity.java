@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     RadioButton quest5b;
     RadioButton quest5c;
     EditText quest6;
-    EditText text;
+    EditText nameField;
     RadioButton quest7a;
     RadioButton quest7b;
     RadioButton quest7d;
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         quest5b = findViewById(R.id.quest_5_id_b);
         quest5c = findViewById(R.id.quest_5_id_c);
         quest6 = findViewById(R.id.quest_6_ans);
-        text = findViewById(R.id.name);
+        nameField = findViewById(R.id.name);
         quest7a = findViewById(R.id.quest_7_id_a);
         quest7b = findViewById(R.id.quest_7_id_b);
         quest7d = findViewById(R.id.quest_7_id_d);
@@ -133,12 +133,12 @@ public class MainActivity extends AppCompatActivity {
      *             It also checks the correct answer for number 6
      */
     public void order(View view) {
-        String name = text.getText().toString();
+        String name = nameField.getText().toString();
         String ans = quest6.getText().toString();
         if (name.trim().equals("")) {
-            Toast nam = Toast.makeText(this, "Please enter your name!!! ", Toast.LENGTH_SHORT);
-            nam.setGravity(Gravity.CENTER, 0, 0);
-            nam.show();
+            Toast check1 = Toast.makeText(this, "Please enter your name!!! ", Toast.LENGTH_SHORT);
+            check1.setGravity(Gravity.CENTER, 0, 0);
+            check1.show();
             return;
         }
         if ((questOne.getCheckedRadioButtonId() == -1) || (questTwo.getCheckedRadioButtonId() == -1) || (questThree.getCheckedRadioButtonId() == -1)
@@ -147,9 +147,9 @@ public class MainActivity extends AppCompatActivity {
                 || (questEight.getCheckedRadioButtonId() == -1) || (questNine.getCheckedRadioButtonId() == -1)
                 || (questTen.getCheckedRadioButtonId() == -1) || ((!box1.isChecked()) && (!box2.isChecked()) && (!box3.isChecked())
                 && (!box4.isChecked()) && (!box5.isChecked()))) {
-            Toast chek = Toast.makeText(this, "Please answer all questions!!! ", Toast.LENGTH_SHORT);
-            chek.setGravity(Gravity.CENTER, 0, 0);
-            chek.show();
+            Toast check2 = Toast.makeText(this, "Please answer all questions!!! ", Toast.LENGTH_SHORT);
+            check2.setGravity(Gravity.CENTER, 0, 0);
+            check2.show();
             return;
         }
         if (ans.trim().equalsIgnoreCase("russia")) {
@@ -161,21 +161,21 @@ public class MainActivity extends AppCompatActivity {
         String messag = "Check the questions answered wrongly while app resets!!!";
         wrongAnswer();
         String order = endMessage(name, score);
-        Toast res = Toast.makeText(this, order, Toast.LENGTH_LONG);
-        res.setGravity(Gravity.CENTER, 0, 0);
-        res.show();
+        Toast check4 = Toast.makeText(this, order, Toast.LENGTH_LONG);
+        check4.setGravity(Gravity.CENTER, 0, 0);
+        check4.show();
         if (score < 100) {
-            Toast inf = Toast.makeText(this, messag, Toast.LENGTH_LONG);
-            inf.setGravity(Gravity.CENTER, 0, 0);
-            inf.show();
+            Toast check5 = Toast.makeText(this, messag, Toast.LENGTH_LONG);
+            check5.setGravity(Gravity.CENTER, 0, 0);
+            check5.show();
         } else {
-            Toast inf = Toast.makeText(this, "Wait while app resets!!!", Toast.LENGTH_LONG);
-            inf.setGravity(Gravity.CENTER, 0, 0);
-            inf.show();
+            Toast check5 = Toast.makeText(this, "Wait while app resets!!!", Toast.LENGTH_LONG);
+            check5.setGravity(Gravity.CENTER, 0, 0);
+            check5.show();
         }
-        Toast inf2 = Toast.makeText(this, "Resetting..............", Toast.LENGTH_LONG);
-        inf2.setGravity(Gravity.CENTER, 0, 0);
-        inf2.show();
+        Toast check6 = Toast.makeText(this, "Resetting..............", Toast.LENGTH_LONG);
+        check6.setGravity(Gravity.CENTER, 0, 0);
+        check6.show();
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -237,7 +237,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void reset() {
         quest6.setText(null);
-        text.setText(null);
+        nameField.setText(null);
         questOne.clearCheck();
         questTwo.clearCheck();
         questThree.clearCheck();
