@@ -15,12 +15,115 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Variables used in the app
     int score = 0;
+    RadioButton quest1a;
+    RadioButton quest1c;
+    RadioButton quest1d;
+    RadioButton quest2a;
+    RadioButton quest2b;
+    RadioButton quest2c;
+    RadioButton quest3b;
+    RadioButton quest3c;
+    RadioButton quest3d;
+    CheckBox box1;
+    CheckBox box2;
+    CheckBox box3;
+    CheckBox box4;
+    CheckBox box5;
+    RadioButton quest5a;
+    RadioButton quest5b;
+    RadioButton quest5c;
+    EditText quest6;
+    EditText text;
+    RadioButton quest7a;
+    RadioButton quest7b;
+    RadioButton quest7d;
+    RadioButton quest7e;
+    RadioButton quest8a;
+    RadioButton quest8b;
+    RadioButton quest8c;
+    RadioButton quest9a;
+    RadioButton quest9b;
+    RadioButton quest9d;
+    RadioButton quest10a;
+    RadioButton quest10c;
+    RadioButton quest10d;
+    RadioGroup questOne;
+    RadioGroup questTwo;
+    RadioGroup questThree;
+    RadioGroup questFive;
+    RadioGroup questSeven;
+    RadioGroup questEight;
+    RadioGroup questNine;
+    RadioGroup questTen;
+    ImageView wrong_1;
+    ImageView wrong_2;
+    ImageView wrong_3;
+    ImageView wrong_4;
+    ImageView wrong_5;
+    ImageView wrong_6;
+    ImageView wrong_7;
+    ImageView wrong_8;
+    ImageView wrong_9;
+    ImageView wrong_10;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        quest1a = findViewById(R.id.quest_1_id_a);
+        quest1c = findViewById(R.id.quest_1_id_c);
+        quest1d = findViewById(R.id.quest_1_id_d);
+        quest2a = findViewById(R.id.quest_2_id_a);
+        quest2b = findViewById(R.id.quest_2_id_b);
+        quest2c = findViewById(R.id.quest_2_id_c);
+        quest3b = findViewById(R.id.quest_3_id_b);
+        quest3c = findViewById(R.id.quest_3_id_c);
+        quest3d = findViewById(R.id.quest_3_id_d);
+        box1 = findViewById(R.id.quest_4_id_a);
+        box2 = findViewById(R.id.quest_4_id_b);
+        box3 = findViewById(R.id.quest_4_id_c);
+        box4 = findViewById(R.id.quest_4_id_d);
+        box5 = findViewById(R.id.quest_4_id_e);
+        quest5a = findViewById(R.id.quest_5_id_a);
+        quest5b = findViewById(R.id.quest_5_id_b);
+        quest5c = findViewById(R.id.quest_5_id_c);
+        quest6 = findViewById(R.id.quest_6_ans);
+        text = findViewById(R.id.name);
+        quest7a = findViewById(R.id.quest_7_id_a);
+        quest7b = findViewById(R.id.quest_7_id_b);
+        quest7d = findViewById(R.id.quest_7_id_d);
+        quest7e = findViewById(R.id.quest_7_id_e);
+        quest8a = findViewById(R.id.quest_8_id_a);
+        quest8b = findViewById(R.id.quest_8_id_b);
+        quest8c = findViewById(R.id.quest_8_id_c);
+        quest9a = findViewById(R.id.quest_9_id_a);
+        quest9b = findViewById(R.id.quest_9_id_b);
+        quest9d = findViewById(R.id.quest_9_id_d);
+        quest10a = findViewById(R.id.quest_10_id_a);
+        quest10c = findViewById(R.id.quest_10_id_c);
+        quest10d = findViewById(R.id.quest_10_id_d);
+        questOne = findViewById(R.id.quest_1);
+        questTwo = findViewById(R.id.quest_2);
+        questThree = findViewById(R.id.quest_3);
+        questFive = findViewById(R.id.quest_5);
+        questSeven = findViewById(R.id.quest_7);
+        questEight = findViewById(R.id.quest_8);
+        questNine = findViewById(R.id.quest_9);
+        questTen = findViewById(R.id.quest_10);
+        wrong_1 = findViewById(R.id.wrong_1);
+        wrong_2 = findViewById(R.id.wrong_2);
+        wrong_3 = findViewById(R.id.wrong_3);
+        wrong_4 = findViewById(R.id.wrong_4);
+        wrong_5 = findViewById(R.id.wrong_5);
+        wrong_6 = findViewById(R.id.wrong_6);
+        wrong_7 = findViewById(R.id.wrong_7);
+        wrong_8 = findViewById(R.id.wrong_8);
+        wrong_9 = findViewById(R.id.wrong_9);
+        wrong_10 = findViewById(R.id.wrong_10);
+
     }
 
     /**
@@ -30,29 +133,14 @@ public class MainActivity extends AppCompatActivity {
      *             It also checks the correct answer for number 6
      */
     public void order(View view) {
-        EditText text = findViewById(R.id.name);
         String name = text.getText().toString();
-        EditText ansSix = findViewById(R.id.quest_6_ans);
-        String ans = ansSix.getText().toString();
+        String ans = quest6.getText().toString();
         if (name.trim().equals("")) {
             Toast nam = Toast.makeText(this, "Please enter your name!!! ", Toast.LENGTH_SHORT);
             nam.setGravity(Gravity.CENTER, 0, 0);
             nam.show();
             return;
         }
-        RadioGroup questOne = findViewById(R.id.quest_1);
-        RadioGroup questTwo = findViewById(R.id.quest_2);
-        RadioGroup questThree = findViewById(R.id.quest_3);
-        RadioGroup questFive = findViewById(R.id.quest_5);
-        RadioGroup questSeven = findViewById(R.id.quest_7);
-        RadioGroup questEight = findViewById(R.id.quest_8);
-        RadioGroup questNine = findViewById(R.id.quest_9);
-        RadioGroup questTen = findViewById(R.id.quest_10);
-        CheckBox box1 = findViewById(R.id.quest_4_id_a);
-        CheckBox box2 = findViewById(R.id.quest_4_id_b);
-        CheckBox box3 = findViewById(R.id.quest_4_id_c);
-        CheckBox box4 = findViewById(R.id.quest_4_id_d);
-        CheckBox box5 = findViewById(R.id.quest_4_id_e);
         if ((questOne.getCheckedRadioButtonId() == -1) || (questTwo.getCheckedRadioButtonId() == -1) || (questThree.getCheckedRadioButtonId() == -1)
                 || (questFive.getCheckedRadioButtonId() == -1)
                 || (ans.trim().equals("")) || (questSeven.getCheckedRadioButtonId() == -1)
@@ -148,18 +236,8 @@ public class MainActivity extends AppCompatActivity {
      * This method resets the app after all the questions have been submitted
      */
     public void reset() {
-        EditText text = findViewById(R.id.quest_6_ans);
+        quest6.setText(null);
         text.setText(null);
-        EditText txt = findViewById(R.id.name);
-        txt.setText(null);
-        RadioGroup questOne = findViewById(R.id.quest_1);
-        RadioGroup questTwo = findViewById(R.id.quest_2);
-        RadioGroup questThree = findViewById(R.id.quest_3);
-        RadioGroup questFive = findViewById(R.id.quest_5);
-        RadioGroup questSeven = findViewById(R.id.quest_7);
-        RadioGroup questEight = findViewById(R.id.quest_8);
-        RadioGroup questNine = findViewById(R.id.quest_9);
-        RadioGroup questTen = findViewById(R.id.quest_10);
         questOne.clearCheck();
         questTwo.clearCheck();
         questThree.clearCheck();
@@ -168,26 +246,11 @@ public class MainActivity extends AppCompatActivity {
         questEight.clearCheck();
         questNine.clearCheck();
         questTen.clearCheck();
-        CheckBox box1 = findViewById(R.id.quest_4_id_a);
-        CheckBox box2 = findViewById(R.id.quest_4_id_b);
-        CheckBox box3 = findViewById(R.id.quest_4_id_c);
-        CheckBox box4 = findViewById(R.id.quest_4_id_d);
-        CheckBox box5 = findViewById(R.id.quest_4_id_e);
         box1.setChecked(false);
         box2.setChecked(false);
         box3.setChecked(false);
         box4.setChecked(false);
         box5.setChecked(false);
-        ImageView wrong_1 = findViewById(R.id.wrong_1);
-        ImageView wrong_2 = findViewById(R.id.wrong_2);
-        ImageView wrong_3 = findViewById(R.id.wrong_3);
-        ImageView wrong_4 = findViewById(R.id.wrong_4);
-        ImageView wrong_5 = findViewById(R.id.wrong_5);
-        ImageView wrong_6 = findViewById(R.id.wrong_6);
-        ImageView wrong_7 = findViewById(R.id.wrong_7);
-        ImageView wrong_8 = findViewById(R.id.wrong_8);
-        ImageView wrong_9 = findViewById(R.id.wrong_9);
-        ImageView wrong_10 = findViewById(R.id.wrong_10);
         wrong_1.setVisibility(View.INVISIBLE);
         wrong_2.setVisibility(View.INVISIBLE);
         wrong_3.setVisibility(View.INVISIBLE);
@@ -205,75 +268,34 @@ public class MainActivity extends AppCompatActivity {
      * This method indicates to the user the questions that were answered wrongly
      */
     public void wrongAnswer() {
-        RadioButton quest1a = findViewById(R.id.quest_1_id_a);
-        RadioButton quest1c = findViewById(R.id.quest_1_id_c);
-        RadioButton quest1d = findViewById(R.id.quest_1_id_d);
-        RadioButton quest2a = findViewById(R.id.quest_2_id_a);
-        RadioButton quest2b = findViewById(R.id.quest_2_id_b);
-        RadioButton quest2c = findViewById(R.id.quest_2_id_c);
-        RadioButton quest3b = findViewById(R.id.quest_3_id_b);
-        RadioButton quest3c = findViewById(R.id.quest_3_id_c);
-        RadioButton quest3d = findViewById(R.id.quest_3_id_d);
-        CheckBox box1 = findViewById(R.id.quest_4_id_a);
-        CheckBox box2 = findViewById(R.id.quest_4_id_b);
-        CheckBox box3 = findViewById(R.id.quest_4_id_c);
-        CheckBox box4 = findViewById(R.id.quest_4_id_d);
-        CheckBox box5 = findViewById(R.id.quest_4_id_e);
-        RadioButton quest5a = findViewById(R.id.quest_5_id_a);
-        RadioButton quest5b = findViewById(R.id.quest_5_id_b);
-        RadioButton quest5c = findViewById(R.id.quest_5_id_c);
-        EditText quest6 = findViewById(R.id.quest_6_ans);
-        RadioButton quest7a = findViewById(R.id.quest_7_id_a);
-        RadioButton quest7b = findViewById(R.id.quest_7_id_b);
-        RadioButton quest7d = findViewById(R.id.quest_7_id_d);
-        RadioButton quest7e = findViewById(R.id.quest_7_id_e);
-        RadioButton quest8a = findViewById(R.id.quest_8_id_a);
-        RadioButton quest8b = findViewById(R.id.quest_8_id_b);
-        RadioButton quest8c = findViewById(R.id.quest_8_id_c);
-        RadioButton quest9a = findViewById(R.id.quest_9_id_a);
-        RadioButton quest9b = findViewById(R.id.quest_9_id_b);
-        RadioButton quest9d = findViewById(R.id.quest_9_id_d);
-        RadioButton quest10a = findViewById(R.id.quest_10_id_a);
-        RadioButton quest10c = findViewById(R.id.quest_10_id_c);
-        RadioButton quest10d = findViewById(R.id.quest_10_id_d);
         if (quest1a.isChecked() || quest1c.isChecked() || quest1d.isChecked()) {
-            ImageView wrong_1 = findViewById(R.id.wrong_1);
             wrong_1.setVisibility(View.VISIBLE);
         }
         if (quest2a.isChecked() || quest2b.isChecked() || quest2c.isChecked()) {
-            ImageView wrong_2 = findViewById(R.id.wrong_2);
             wrong_2.setVisibility(View.VISIBLE);
         }
         if (quest3b.isChecked() || quest3c.isChecked() || quest3d.isChecked()) {
-            ImageView wrong_3 = findViewById(R.id.wrong_3);
             wrong_3.setVisibility(View.VISIBLE);
         }
         if (!(box3.isChecked() && box5.isChecked() && !(box1.isChecked()) && !(box2.isChecked()) && !(box4.isChecked()))) {
-            ImageView wrong_4 = findViewById(R.id.wrong_4);
             wrong_4.setVisibility(View.VISIBLE);
         }
         if (quest5b.isChecked() || quest5c.isChecked() || quest5a.isChecked()) {
-            ImageView wrong_5 = findViewById(R.id.wrong_5);
             wrong_5.setVisibility(View.VISIBLE);
         }
         if (!(quest6.getText().toString().trim().equalsIgnoreCase("russia"))) {
-            ImageView wrong_6 = findViewById(R.id.wrong_6);
             wrong_6.setVisibility(View.VISIBLE);
         }
         if (quest7b.isChecked() || quest7a.isChecked() || quest7d.isChecked() || quest7e.isChecked()) {
-            ImageView wrong_7 = findViewById(R.id.wrong_7);
             wrong_7.setVisibility(View.VISIBLE);
         }
         if (quest8b.isChecked() || quest8c.isChecked() || quest8a.isChecked()) {
-            ImageView wrong_8 = findViewById(R.id.wrong_8);
             wrong_8.setVisibility(View.VISIBLE);
         }
         if (quest9b.isChecked() || quest9a.isChecked() || quest9d.isChecked()) {
-            ImageView wrong_9 = findViewById(R.id.wrong_9);
             wrong_9.setVisibility(View.VISIBLE);
         }
         if (quest10d.isChecked() || quest10c.isChecked() || quest10a.isChecked()) {
-            ImageView wrong_10 = findViewById(R.id.wrong_10);
             wrong_10.setVisibility(View.VISIBLE);
         }
     }
@@ -382,11 +404,6 @@ public class MainActivity extends AppCompatActivity {
      *             It also adds to the score if the correct answer is chosen and does nothing otherwise
      */
     public void question4(View view) {
-        CheckBox box1 = findViewById(R.id.quest_4_id_a);
-        CheckBox box2 = findViewById(R.id.quest_4_id_b);
-        CheckBox box3 = findViewById(R.id.quest_4_id_c);
-        CheckBox box4 = findViewById(R.id.quest_4_id_d);
-        CheckBox box5 = findViewById(R.id.quest_4_id_e);
         boolean val1 = box1.isChecked();
         boolean val2 = box2.isChecked();
         boolean val3 = box3.isChecked();
